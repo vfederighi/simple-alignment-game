@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Alinhamento</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="startMenu">
+        <h1>Jogo de Alinhamento</h1>
+        <div class="settings">
+            <label>Velocidade Inicial: <input type="range" id="initialSpeed" min="500" max="2000" value="1000"></label>
+            <label>Multiplicador: <input type="range" id="speedMultiplier" min="0.5" max="1.5" step="0.1" value="0.8"></label>
+        </div>
+        <p>Pressione Espaço para iniciar</p>
+    </div>
+    <div id="gameContainer" class="hidden">
+        <div id="grid"></div>
+        <div id="hud">
+            <span>Pontos: <span id="score">0</span></span>
+            <span>Vidas: <span id="lives">3</span></span>
+        </div>
+        <div id="countdown" class="hidden"></div>
+    </div>
+    <div id="gameOver" class="hidden">
+        <h2>Fim de Jogo!</h2>
+        <p>Acertos: <span id="hits">0</span></p>
+        <p>Erros: <span id="misses">0</span></p>
+        <p>Pontuação Final: <span id="finalScore">0</span></p>
+        <button onclick="location.reload()">Jogar Novamente</button>
+    </div>
+    <div id="adminPanel" class="hidden">
+        <h2>Configurações Administrativas</h2>
+        <div class="settings">
+            <label>Velocidade Inicial: <input type="range" id="adminInitialSpeed" min="500" max="2000" value="1000"></label>
+            <label>Multiplicador: <input type="range" id="adminSpeedMultiplier" min="0.5" max="1.5" step="0.1" value="0.8"></label>
+        </div>
+        <button id="applySettings">Aplicar Configurações</button>
+        <button id="resetRound">Reiniciar Rodada</button>
+    </div>    
+    <script src="js/game.js"></script>
+</body>
+</html>

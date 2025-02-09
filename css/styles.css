@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1a1a1a;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#startMenu {
+    text-align: center;
+    padding: 2rem;
+    background: #333;
+    border-radius: 10px;
+}
+
+#gameContainer {
+    position: relative;
+    text-align: center;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    gap: 10px;
+    margin: 20px;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    background: #444;
+    border: 2px solid #666;
+    transition: background 0.2s;
+}
+
+.cell.active {
+    background: #ff4444;
+    box-shadow: 0 0 15px #ff0000;
+}
+
+#countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    text-shadow: 0 0 10px white;
+}
+
+#gameOver {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#adminPanel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 100;
+}
+
+.settings {
+    margin: 1rem 0;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
